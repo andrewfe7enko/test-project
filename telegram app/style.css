@@ -1,0 +1,52 @@
+:root{
+  --bg:#0f1115; --panel:#151922; --muted:#a6adbb; --text:#e5e7eb; --accent:#22c55e;
+  --border:#2a2f3a; --btn:#2b3342; --btnText:#dbe3f2; --btnGhost:#222735;
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;background:var(--bg);color:var(--text);font:16px/1.4 system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+}
+.app{max-width:420px;margin:0 auto;padding:20px}
+.back{display:inline-block;margin-bottom:8px;color:var(--muted);text-decoration:none}
+.logo{margin:0;font-size:32px;letter-spacing:.5px}
+.logo span{color:var(--accent)}
+.beta{color:#9aa3b2;margin:4px 0 18px;font-weight:700;letter-spacing:2px}
+.label{display:block;margin:8px 0 8px;color:var(--muted);font-size:14px}
+.select-wrap{background:var(--panel);border:1px solid var(--border);border-radius:12px}
+select{
+  width:100%;padding:12px 14px;background:transparent;color:var(--text);
+  border:none;outline:none;appearance:none;font-size:16px
+}
+
+.uploader{margin:14px 0 10px}
+.dropzone{
+  border:2px dashed #3a4150;border-radius:16px;padding:28px 14px;text-align:center;cursor:pointer;
+  transition:border .2s ease;background:rgba(255,255,255,.02)
+}
+.dropzone:hover{border-color:#4b5563}
+.arrow{font-size:22px;margin-bottom:8px;opacity:.85}
+.dz-text{color:var(--muted)}
+.preview{display:none;max-width:100%;margin-top:12px;border-radius:12px;border:1px solid var(--border)}
+
+.btn{
+  width:100%;padding:14px 16px;margin-top:12px;border-radius:14px;border:1px solid var(--border);
+  font-weight:600;cursor:pointer;transition:opacity .2s ease
+}
+.btn[disabled]{opacity:.5;cursor:not-allowed}
+.primary{background:var(--btn);color:var(--btnText)}
+.ghost{background:var(--btnGhost);color:var(--muted)}
+
+.progress{margin-top:14px}
+.hidden{display:none}
+.bar{width:100%;height:10px;background:#1b2030;border-radius:999px;overflow:hidden;border:1px solid var(--border)}
+.bar-fill{display:block;height:100%;background:var(--accent);width:0%}
+.p-text{font-size:14px;color:var(--muted);margin-top:8px}
+
+.result .card{
+  background:var(--panel);border:1px solid var(--border);border-radius:16px;padding:14px;margin-top:14px
+}
+.row{display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px dashed #2a3140}
+.row:last-child{border-bottom:none}
+.row span{color:var(--muted)}
+.hint{margin-top:8px;color:#94a3b8;font-size:12px;text-align:center}

@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>MaxWIN Radar — BETA</title>
+  <link rel="stylesheet" href="style.css " />
+  <script src="script.js"></script>
+</head>
+<body>
+  <main class="app">
+    <a class="back" href="#" id="backBtn">Назад</a>
+
+    <h1 class="logo">MaxWIN <span>Radar</span></h1>
+    <div class="beta">BETA</div>
+
+    <!-- Выпадающий список -->
+    <label class="label" for="gameSelect">Выберите игру</label>
+    <div class="select-wrap">
+      <select id="gameSelect">
+        <option value="" selected>Выберите игру</option>
+        <option>Coin Gobbler</option>
+        <option>Alien Fruits</option>
+        <option>Luck of Tiger</option>
+        <option>Coin Up</option>
+        <option>Luck of Panda</option>
+        <option>Santa Mummy</option>
+        <option>Mummyland Treasures</option>
+        <option>Gates of Olympus 1000</option>
+        <option>Pirates Pub</option>
+        <option>Sugar Rush</option>
+        <option>Sugar Rush 1000</option>
+        <option>Sun of Egypt 3</option>
+        <option>Sweet Bonanza 1000</option>
+        <option>The Dog House</option>
+        <option>Wild West Gold</option>
+        <option>Don Catleone</option>
+        <option>Octo Attack</option>
+        <option>Bonanza Billion</option>
+      </select>
+    </div>
+
+    <!-- Загрузка изображения -->
+    <div class="uploader" id="uploader">
+      <input id="fileInput" type="file" accept="image/*" capture="environment" hidden />
+      <div class="dropzone" id="dropzone">
+        <div class="arrow">⬆</div>
+        <div class="dz-text">Загрузите изображение слота</div>
+      </div>
+      <img id="preview" class="preview" alt="" />
+    </div>
+
+    <!-- Кнопки -->
+    <button class="btn primary" id="analyzeBtn" disabled>Анализ</button>
+    <button class="btn ghost" id="resetBtn">Ещё раз</button>
+
+    <!-- Секция результатов/прогресса -->
+    <div id="progress" class="progress hidden">
+      <div class="bar"><span class="bar-fill" id="barFill" style="width:0%"></span></div>
+      <div class="p-text" id="pText">Анализ…</div>
+    </div>
+
+    <div id="result" class="result hidden">
+      <div class="card">
+        <div class="row"><span>Игра:</span><b id="rGame">—</b></div>
+        <div class="row"><span>Индекс ×:</span><b id="rIdx">—</b></div>
+        <div class="row"><span>Прогноз спинов до бонуса:</span><b id="rSpins">—</b></div>
+        <div class="row"><span>Вероятность (псевдо):</span><b id="rProb">—</b></div>
+      </div>
+      <div class="hint">Результаты случайны и не являются реальным анализом.</div>
+    </div>
+  </main>
+
+  <!-- Скрипт Telegram WebApp доступен внутри Telegram webview -->
+  <script src="https://telegram.org/js/telegram-web-app.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
